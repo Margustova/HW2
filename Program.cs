@@ -100,25 +100,48 @@ Console.WriteLine(Distance(x1, y1, x2, y2));*/
 
 A (3,6,8); B (2,1,-7), -> 15.84
 
-A (7,-5, 0); B (1,-1,9) -> 11.53
+A (7,-5, 0); B (1,-1,9) -> 11.53 */
 
-Задача 23
-
-Напишите программу, которая принимает на вход число (N) и выдаёт таблицу кубов чисел от 1 до N.
-
-3 -> 1, 8, 27
-5 -> 1, 8, 27, 64, 125 */
-void Table( int N)
+double Distance(double x1, double y1, double z1, double x2, double y2, double z2)
 {
-    int index = 1;
-    while (index <= N)
-    { 
-    double result = Math.Pow(index, 3);
-    Console.WriteLine(result );
-    index ++;
-    }
+    double AC = x2 - x1;
+    double BC = y2 - y1;
+    double DC = z2 - z1;
+    double result = Math.Sqrt((Math.Pow(AC, 2) + Math.Pow(BC, 2) + Math.Pow(DC, 2)));
+    return result; 
 }
-Console.WriteLine("Input N: ");
-int N = Convert.ToInt32(Console.ReadLine());
-Table(N);
+Console.Write("Input coordinats x1 : ");
+double x1 = Convert.ToDouble(Console.ReadLine());
+Console.Write("Input coordinats y1 : ");
+double y1 = Convert.ToDouble(Console.ReadLine());
+Console.Write("Input coordinats z1 : ");
+double z1 = Convert.ToDouble(Console.ReadLine());
+Console.Write("Input coordinats x2: ");
+double x2 = Convert.ToDouble(Console.ReadLine());
+Console.Write("Input coordinats y2 : ");
+double y2 = Convert.ToInt32(Console.ReadLine());
+Console.Write("Input coordinats z2 : ");
+double z2 = Convert.ToDouble(Console.ReadLine());
+Console.WriteLine(Distance(x1, y1, z1, x2, y2, z2 ));
+
+
+// Задача 23
+
+// Напишите программу, которая принимает на вход число (N) и выдаёт таблицу кубов чисел от 1 до N.
+
+// 3 -> 1, 8, 27
+// 5 -> 1, 8, 27, 64, 125 */
+// void Table( int N)
+// {
+//     int index = 1;
+//     while (index <= N)
+//     { 
+//     double result = Math.Pow(index, 3);
+//     Console.WriteLine(result );
+//     index ++;
+//     }
+// }
+// Console.WriteLine("Input N: ");
+// int N = Convert.ToInt32(Console.ReadLine());
+// Table(N);
 
