@@ -52,8 +52,7 @@ double y = Convert.ToDouble(Console.ReadLine());
 Console.WriteLine(QuartNum(x, y)); */
 
 //Напишите программу, которая принимает на вход координаты двух точек и находит расстояние между ними в 2D пространстве.
-
-double Distance(double x1, double y1, double x2, double y2)
+/*double Distance(double x1, double y1, double x2, double y2)
 {
     double AC = x2 - x1;
     double BC = y2 - y1;
@@ -68,6 +67,19 @@ Console.Write("Input coordinats x2: ");
 double x2 = Convert.ToDouble(Console.ReadLine());
 Console.Write("Input coordinats y2 : ");
 double y2 = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine(Distance(x1, y1, x2, y2));
+Console.WriteLine(Distance(x1, y1, x2, y2));*/
 
 /*Напишите программу, которая принимает на вход число (N) и выдаёт таблицу квадратов чисел от 1 до N. */
+void Quadrat(int N)
+{
+    int index =1; // переменная, на которую мы будем увеличивать шаг
+    while (index <= N)
+        {
+            double result = Math.Pow(index,2); //индекс и степень в которую мы его возводим
+            index++;
+            Console.Write($"{result} ");
+        }
+}
+Console.Write("Input N : ");
+int N = Convert.ToInt32(Console.ReadLine());
+Quadrat(N); 
