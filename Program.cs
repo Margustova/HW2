@@ -92,9 +92,59 @@ Console.WriteLine(Distance(x1, y1, x2, y2));*/
 
 12821 -> да
 
-23432 -> да
+23432 -> да */
+/*
 
-Задача 21
+bool Palindrom(int FiveDigitNumb)
+{
+    if (FiveDigitNumb < 100000 && FiveDigitNumb> 9999) //проверяем число на 5-тизначное
+        
+    {
+        int a1 = FiveDigitNumb / 10000; //  сравниваем первую и последнюю цифру в числе,например, 12321
+        int a5 = FiveDigitNumb % 10; //1 и 1
+    }
+        if (a1 == a5)
+            
+        {
+            int a2 = FiveDigitNumb / 1000 % 10; //12321/1000%10 = 2 сравниваем вторую и четвертую цифру в числе
+            int a4 = FiveDigitNumb / 10 % 10; //12321/10 % 10=2
+        }
+            if (a2 == a4)
+            {
+                Console.WriteLine($"{FiveDigitNumb} is palindrom");
+                return true;
+             else 
+                return false;
+            }                          
+}
+Console.Write("Input a FiveDigitNumb: ");
+int FiveDigitNumb = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine(Palindrom(FiveDigitNumb));*/
+bool Palindrom(int FiveDigitNumb)
+{
+    if (FiveDigitNumb < 100000 && FiveDigitNumb> 9999) //проверяем число на 5-тизначное
+    {
+        int a1 = FiveDigitNumb / 10000; //  сравниваем первую и последнюю цифру в числе,например, 12321
+        int a5 = FiveDigitNumb % 10; //1 и 1
+        if (a1 == a5)
+        {
+            int a2 = FiveDigitNumb / 1000 % 10; //12321/1000%10 = 2 сравниваем вторую и четвертую цифру в числе
+            int a4 = FiveDigitNumb / 10 % 10; //12321/10 % 10=2
+            if (a2 == a4)
+            {
+                Console.WriteLine($"{FiveDigitNumb} is palindrom");
+                return true;
+            }
+            return false;
+        }
+    }
+    return false;
+}
+Console.Write("Input a FiveDigitNumb: ");
+int FiveDigitNumb = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine(Palindrom(FiveDigitNumb));
+
+/* Задача 21
 
 Напишите программу, которая принимает на вход координаты двух точек и находит расстояние между ними в 3D пространстве.
 
@@ -102,27 +152,27 @@ A (3,6,8); B (2,1,-7), -> 15.84
 
 A (7,-5, 0); B (1,-1,9) -> 11.53 */
 
-double Distance(double x1, double y1, double z1, double x2, double y2, double z2)
-{
-    double AC = x2 - x1;
-    double BC = y2 - y1;
-    double DC = z2 - z1;
-    double result = Math.Sqrt((Math.Pow(AC, 2) + Math.Pow(BC, 2) + Math.Pow(DC, 2)));
-    return result; 
-}
-Console.Write("Input coordinats x1 : ");
-double x1 = Convert.ToDouble(Console.ReadLine());
-Console.Write("Input coordinats y1 : ");
-double y1 = Convert.ToDouble(Console.ReadLine());
-Console.Write("Input coordinats z1 : ");
-double z1 = Convert.ToDouble(Console.ReadLine());
-Console.Write("Input coordinats x2: ");
-double x2 = Convert.ToDouble(Console.ReadLine());
-Console.Write("Input coordinats y2 : ");
-double y2 = Convert.ToInt32(Console.ReadLine());
-Console.Write("Input coordinats z2 : ");
-double z2 = Convert.ToDouble(Console.ReadLine());
-Console.WriteLine(Distance(x1, y1, z1, x2, y2, z2 ));
+// double Distance(double x1, double y1, double z1, double x2, double y2, double z2)
+// {
+//     double AC = x2 - x1;
+//     double BC = y2 - y1;
+//     double DC = z2 - z1;
+//     double result = Math.Sqrt((Math.Pow(AC, 2) + Math.Pow(BC, 2) + Math.Pow(DC, 2)));
+//     return result; 
+// }
+// Console.Write("Input coordinats x1 : ");
+// double x1 = Convert.ToDouble(Console.ReadLine());
+// Console.Write("Input coordinats y1 : ");
+// double y1 = Convert.ToDouble(Console.ReadLine());
+// Console.Write("Input coordinats z1 : ");
+// double z1 = Convert.ToDouble(Console.ReadLine());
+// Console.Write("Input coordinats x2: ");
+// double x2 = Convert.ToDouble(Console.ReadLine());
+// Console.Write("Input coordinats y2 : ");
+// double y2 = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Input coordinats z2 : ");
+// double z2 = Convert.ToDouble(Console.ReadLine());
+// Console.WriteLine(Distance(x1, y1, z1, x2, y2, z2 ));
 
 
 // Задача 23
